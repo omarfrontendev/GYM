@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  background-color: transparent;
+}
+a {
+  color: #fff;
+}
+button {
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+}
+body {
+  background-color: var(--bgk-color);
+  background-image: url('./assets/download.png');
+  /* overflow: hidden; */
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+:root {
+  --lightgray: #d9d9d9;
+  --gray: #9c9c9c;
+  --orange: #f48915;
+  --darkGrey: #464d53;
+  --caloryCard: #656565;
+  --gradient: linear-gradient(210.41deg,#fa5042 1.14%,#ffa739 100.75%);
+  --bgk-color: #3c3f45;
+}
+/* Global Text */
+.flex {
+  display: flex;
+}
+.flex.center {
+  justify-content: center;
+  align-items: center;
+}
+.flex.justify-start {
+  justify-content: flex-start;
+}
+.flex.justify-end {
+  justify-content: flex-end;
+}
+.flex.space-between {
+  justify-content: space-between;
+}
+.flex.justify-center {
+  justify-content: center;
+}
+.flex.column {
+  flex-direction: column;
+}
+.flex.column-center {
+  flex-direction: column;
+  align-items: center;
+}
+.flex.column-end {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.gradient__bk {
+  background-image: var(--gradient);
+  background: rgba(253,120,43,.69);
+  border-radius: 50%;
+  filter: blur(220px);
+  z-index: -9;
+  width: 400px;
+  height: 500px;
+  max-width: 100%;
+}
+.section_space {
+  margin: 60px 0;
+}
+h2.section__title {
+  font-size: 48px;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+h2.section__title span {
+  color: transparent;
+  -webkit-text-stroke-color: #fff9;
+  -webkit-text-stroke-width: 1px;
+}
+@media(max-width: 1199px) {
+  h2.section__title {
+    font-size: 38px;
+  }
+}
+@media(max-width: 991px) {
+  h2.section__title {
+    font-size: 28px;
+  }
+}
+@media(max-width: 767px) {
+  h2.section__title {
+    font-size: 26px;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1350px;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+@media(max-width: 575px) {
+  .container {
+    padding: 0 18px;
+  }
+}

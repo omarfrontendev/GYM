@@ -1,0 +1,49 @@
+.button {
+  padding: 12px 24px;
+  border: 2px solid var(--orange);
+  color: #fff;
+  background-color: var(--orange);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  transition: .6s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+.button.outline {
+  background-color: #fff;
+  color: var(--orange);
+}
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  transition: .6s ease-in-out;
+  z-index: -1;
+}
+.button.outline::before,
+.button.outline::after {
+  background-color: var(--orange);
+}
+.button::before {
+  bottom: -50%;
+}
+.button::after {
+  top: -50%;
+}
+.button:hover::after {
+  top: 0px;
+}
+.button:hover::before {
+  bottom: 0px;
+}
+.button:hover {
+  color: var(--orange);
+}
+.button.outline:hover {
+  color: #fff;
+}

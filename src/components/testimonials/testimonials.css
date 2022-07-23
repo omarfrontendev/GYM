@@ -1,0 +1,158 @@
+.testimony__section {
+  overflow: hidden;
+}
+.testimony_text {
+  row-gap: 20px;
+}
+.testimony_text .subtitle {
+  color: var(--orange);
+  font-weight: 500;
+  font-size: 16px;
+}
+.testimony__content {
+  column-gap: 60px;
+  margin-top: 120px;
+}
+.testimony__content .section__title {
+  margin-bottom: 0;
+}
+p.feedback {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  width: 600px;
+  max-width: 100%;
+  line-height: 1.8;
+  animation: showtext 1s ease forwards;
+  margin: 24px 0 14px;
+}
+p.feedback + div.flex span {
+  color: var(--orange);
+  padding-right: 10px;
+  animation: showtext 1s ease forwards;
+}
+p.feedback + div.flex p {
+  padding-left: 10px;
+  font-weight: 500;
+  animation: showtext 1s ease forwards;
+}
+.testimony_img .img_user {
+  width: 300px;
+}
+.testimony_img .img_user img {
+  object-fit: cover;
+  height: 400px;
+  animation: showtest 1s ease forwards;
+}
+.bgk_fill {
+  width: 100%;
+  height: 100%;
+  background-color: var(--orange);
+  top: 20px;
+  right: -20px;
+  z-index: -1;
+  transition: .3s ease;
+}
+.bgk_outline {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid var(--orange);
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+}
+.testimony__content .btns {
+  position: absolute;
+  bottom: 0%;
+  left: -40%;
+  width: 100px;
+  justify-content: space-around;
+}
+.testimony__content .btns button {
+  color: #fff;
+  background-color: var(--orange);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.testimony__content .btns button.next_btn {
+  transform: rotate(-180deg);
+}
+/* animation */
+@keyframes showtest {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  70% { 
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes showtext {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  70% { 
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@media(max-width: 1199px) {
+  .testimony__content {
+    justify-content: space-between !important;
+    column-gap: 0;
+  }
+  p.feedback {
+    width: 550px;
+  }
+  .testimony_img .img_user {
+    margin-right: 20px;
+  }
+}
+@media(max-width: 991px) {
+  .testimony__content {
+    column-gap: 20px;
+  }
+  p.feedback {
+    width: 360px;
+    max-width: 100%;
+  }
+}
+@media(max-width: 767px) {
+  .testimony__content {
+    flex-direction: column;
+    row-gap: 60px;
+    justify-content: space-between;
+    align-items: flex-start !important;
+  }
+  .testimony_text {
+    width: 100%;
+  }
+  .testimony_img {
+    margin: 0 0 0 auto;
+  }
+}
+@media(max-width: 575px) {
+  .testimony_img .img_user {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .testimony__content .btns {
+    top: -50px;
+    left: 50%;
+    height: 30px;
+    width: 100%;
+    transform: translateX(-50%);
+  }
+}
